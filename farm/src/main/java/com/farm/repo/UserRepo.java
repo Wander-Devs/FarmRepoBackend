@@ -6,9 +6,6 @@ import javax.transaction.Transactional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.stereotype.Repository;
-
-import com.farm.model.Crop;
 import com.farm.model.User;
 
 public interface UserRepo extends JpaRepository<User, Long> {
