@@ -1,5 +1,6 @@
 package com.farm.controller;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.farm.model.Crop;
 import com.farm.model.ResponseModel;
 import com.farm.model.User;
 import com.farm.repo.UserRepo;
@@ -25,6 +27,12 @@ public class UserController {
 	
 	@Autowired
 	private UserRepo userRepo;
+	
+	@GetMapping(value = "all")
+	public List<User> all() {
+		
+		return userRepo.findAllUser();
+	}
 	
 	@PostMapping(value = "register")
 	public User register(@RequestBody User user) {

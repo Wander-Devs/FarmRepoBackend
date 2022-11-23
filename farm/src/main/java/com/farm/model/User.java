@@ -49,6 +49,14 @@ public class User {
 	@JsonIgnore
 	@OneToMany(mappedBy = "cropOwner")
 	private List<Crop> crop;
+	
+	@JsonIgnore
+	@OneToMany(mappedBy = "complainant_user_id")
+	private List<Complaint> complaint;
+	
+	@JsonIgnore
+	@OneToMany(mappedBy = "poster_user_id")
+	private List<Post> post;
 
 	public Long getUser_id() {
 		return user_id;

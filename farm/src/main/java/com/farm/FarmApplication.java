@@ -11,6 +11,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EntityScan("com.farm.model")
 public class FarmApplication {
 
+	
 	public static void main(String[] args) {
 		SpringApplication.run(FarmApplication.class, args);
 	}
